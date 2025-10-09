@@ -6,6 +6,7 @@ export ARCH="$(uname -m)"
 export DESKTOP=https://raw.githubusercontent.com/virt-manager/virt-manager/refs/heads/main/data/virt-manager.desktop.in
 export ICON=https://github.com/virt-manager/virt-manager/blob/main/data/icons/256x256/apps/virt-manager.png?raw=true
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*-$ARCH.AppImage.zsync"
+export RIM_ALLOW_ROOT=1
 URUNTIME="https://raw.githubusercontent.com/pkgforge-dev/Anylinux-AppImages/refs/heads/main/useful-tools/uruntime2appimage.sh"
 
 echo '== download base RunImage'
