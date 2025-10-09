@@ -43,7 +43,7 @@ run_install() {
 	# same for glycin and others
 	pac -Rsn --noconfirm glycin || true
 	pac -Rsn --noconfirm x265 || true
-	pac -Rsn --noconfirm lib32-glibc || true
+	pac -Rsn --noconfirm lib32-glibc lib32-fakechroot lib32-fakeroot || true
 
 	echo '== shrink (optionally)'
 	pac -Rsndd --noconfirm wget svt-av1 gocryptfs jq gnupg
