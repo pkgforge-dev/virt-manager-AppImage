@@ -25,7 +25,12 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Make AppImage
-        run: chmod +x ./*-appimage.sh && ./*-appimage.sh
+        run: |
+          echo 'kernel.apparmor_restrict_unprivileged_userns=0' | sudo tee /etc/sysctl.d/98-apparmor-unuserns.conf
+          echo 0 | sudo tee /proc/sys/kernel/apparmor_restrict_unprivileged_userns
+          sudo apt install zsync
+          chmod +x ./*-appimage.sh 
+          ./*-appimage.sh
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4.6.2
