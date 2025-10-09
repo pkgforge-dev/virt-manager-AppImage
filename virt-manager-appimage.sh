@@ -46,7 +46,7 @@ run_install() {
 	echo '== shrink (optionally)'
 	pac -Rsndd --noconfirm wget gocryptfs jq gnupg
 	rim-shrink --all
-	pac -Rsndd --noconfirm binutils
+	pac -Rsndd --noconfirm binutils perl
 
 	pac -Qi | awk -F': ' '/Name/ {name=$2}
 		/Installed Size/ {size=$2}
