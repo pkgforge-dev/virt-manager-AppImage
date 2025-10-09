@@ -36,15 +36,16 @@ run_install() {
 
 	wget --retry-connrefused --tries=30 "$EXTRA_PACKAGES" -O ./get-debloated-pkgs.sh
 	chmod +x ./get-debloated-pkgs.sh
-	./get-debloated-pkgs.sh --add-opengl opus-mini gdk-pixbuf2-mini
+	./get-debloated-pkgs.sh --add-opengl opus-mini gdk-pixbuf2-mini ffmpeg-mini
 
 	# remove llvm-libs but don't force it just in case something else depends on it
 	pac -Rsn --noconfirm llvm-libs || true
-	# same for glycin
+	# same for glycin and others
 	pac -Rsn --noconfirm glycin || true
+	pac -Rsn --noconfirm x265 || true
 
 	echo '== shrink (optionally)'
-	pac -Rsndd --noconfirm wget gocryptfs jq gnupg
+	pac -Rsndd --noconfirm wget svt-av1 gocryptfs jq gnupg
 	rim-shrink --all
 	pac -Rsndd --noconfirm binutils perl
 
