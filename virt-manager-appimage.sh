@@ -18,16 +18,22 @@ run_install() {
 
 	EXTRA_PACKAGES="https://raw.githubusercontent.com/pkgforge-dev/Anylinux-AppImages/refs/heads/main/useful-tools/get-debloated-pkgs.sh"
 	INSTALL_PKGS=(
-		virt-manager
+		bridge-utils
+		dnsmasq
 		freetype2
 		libxcb
 		libxcursor
 		libxi
 		libxkbcommon-x11
+		openbsd-netcat
 		pipewire-audio
 		pulseaudio
 		pulseaudio-alsa
 		qemu-desktop
+		qemu-full
+		swtpm
+		virtiofsd
+		virt-manager
 		wget
 	)
 
