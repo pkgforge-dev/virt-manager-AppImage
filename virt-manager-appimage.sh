@@ -103,7 +103,7 @@ rm -rfv ./AppDir/sharun/bin/chisel \
 export VERSION="$(cat ~/version)"
 export OUTNAME=virt-manager-"$VERSION"-anylinux-"$ARCH".AppImage
 export OPTIMIZE_LAUNCH=1
-pacman -S --noconfirm zsyncmake
+pacman -S --noconfirm zsync
 wget --retry-connrefused --tries=30 "$URUNTIME" -O ./uruntime2appimage
 chmod +x ./uruntime2appimage
 ./uruntime2appimage
