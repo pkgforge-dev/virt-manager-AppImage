@@ -32,6 +32,10 @@ chmod +x ./quick-sharun
 
 cp -r /usr/lib/python3.* ./AppDir/lib
 
+# TODO upstream to sharun
+echo 'VIRTD_PATH=${SHARUN_DIR}/bin'                 >> ./AppDir/.env
+echo 'LIBVIRT_DRIVER_DIR=${SHARUN_DIR}/lib/libvirt' >> ./AppDir/.env
+
 # MAKE APPIMAGE WITH URUNTIME
 wget --retry-connrefused --tries=30 "$URUNTIME" -O ./uruntime2appimage
 chmod +x ./uruntime2appimage
