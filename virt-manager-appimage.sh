@@ -17,7 +17,7 @@ export DEPLOY_PIPEWIRE=1
 export OPTIMIZE_LAUNCH=1
 
 # this app is hardcoded to look into /usr/share/virt-manager in multiple places
-export PATH_MAPPING='/usr/share/virt-manager:${SHARUN_DIR}/share/virt-manager,/usr/lib/libvirt:${SHARUN_DIR}/lib/libvirt./usr/share/libvirt:${SHARUN_DIR}/share/libvirt,/usr/bin:${SHARUN_DIR}/bin'
+export PATH_MAPPING='/usr/share/virt-manager:${SHARUN_DIR}/share/virt-manager,/usr/lib/libvirt:${SHARUN_DIR}/lib/libvirt./usr/share/libvirt:${SHARUN_DIR}/share/libvirt'
 
 # DEPLOY ALL LIBS
 wget --retry-connrefused --tries=30 "$SHARUN" -O ./quick-sharun
