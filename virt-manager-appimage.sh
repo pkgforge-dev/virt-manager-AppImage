@@ -17,7 +17,7 @@ export DEPLOY_PIPEWIRE=1
 export OPTIMIZE_LAUNCH=1
 
 # this app is hardcoded to look into /usr/share/virt-manager in multiple places
-export PATH_MAPPING='/usr/share/virt-manager:${SHARUN_DIR}/share/virt-manager'
+export PATH_MAPPING='/usr/share/virt-manager:${SHARUN_DIR}/share/virt-manager,/usr/lib/libvirt:${SHARUN_DIR}/lib/libvirt'
 
 # DEPLOY ALL LIBS
 wget --retry-connrefused --tries=30 "$SHARUN" -O ./quick-sharun
@@ -36,7 +36,7 @@ cp -r /usr/lib/python3.* ./AppDir/lib
 
 # TODO upstream to sharun
 echo 'VIRTD_PATH=${SHARUN_DIR}/bin'                 >> ./AppDir/.env
-echo 'LIBVIRT_DRIVER_DIR=${SHARUN_DIR}/lib/libvirt' >> ./AppDir/.env
+#echo 'LIBVIRT_DRIVER_DIR=${SHARUN_DIR}/lib/libvirt' >> ./AppDir/.env
 
 # MAKE APPIMAGE WITH URUNTIME
 wget --retry-connrefused --tries=30 "$URUNTIME" -O ./uruntime2appimage
