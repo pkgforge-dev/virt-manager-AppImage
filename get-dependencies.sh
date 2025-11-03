@@ -7,8 +7,6 @@ EXTRA_PACKAGES="https://raw.githubusercontent.com/pkgforge-dev/Anylinux-AppImage
 
 echo "Installing dependencies..."
 echo "---------------------------------------------------------------"
-pacman -Sy --noconfirm --needed archlinux-keyring
-pacman -Syu --noconfirm
 pacman -Syu --noconfirm \
 	base-devel       \
 	bridge-utils     \
@@ -23,7 +21,6 @@ pacman -Syu --noconfirm \
 	libxkbcommon-x11 \
 	libxrandr        \
 	libxss           \
-	openbsd-netcat   \
 	pipewire-audio   \
 	pulseaudio       \
 	pulseaudio-alsa  \
