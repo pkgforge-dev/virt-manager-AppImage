@@ -9,6 +9,8 @@ SHARUN="https://raw.githubusercontent.com/pkgforge-dev/Anylinux-AppImages/refs/h
 
 export ADD_HOOKS="self-updater.bg.hook:fix-namespaces.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
+export DESKTOP=/usr/share/applications/virt-manager.desktop
+export ICON=/usr/share/icons/hicolor/256x256/apps/virt-manager.png
 export OUTNAME=virt-manager-"$VERSION"-anylinux-"$ARCH".AppImage
 export DEPLOY_OPENGL=1
 export DEPLOY_PIPEWIRE=1
