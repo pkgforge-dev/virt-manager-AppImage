@@ -28,6 +28,8 @@ chmod +x ./quick-sharun
 	/usr/bin/qemu*            \
 	/usr/bin/virt*            \
 	/usr/bin/libvirtd*        \
+	/usr/lib/libvirt/*        \
+	/usr/lib/libvirt/*/*      \
 	/usr/lib/libgirepository*
 
 cp -r /usr/lib/python3.* ./AppDir/lib
