@@ -20,9 +20,10 @@ export OPTIMIZE_LAUNCH=1
 wget --retry-connrefused --tries=30 "$SHARUN" -O ./quick-sharun
 chmod +x ./quick-sharun
 ./quick-sharun \
-	/usr/bin/virt-manager \
-	/usr/bin/python*      \
-	/usr/bin/qemu*
+	/usr/bin/virt-manager     \
+	/usr/bin/python*          \
+	/usr/bin/qemu*            \
+	/usr/lib/libgirepository*
 
 cp -r /usr/lib/python3.* ./AppDir/lib
 
