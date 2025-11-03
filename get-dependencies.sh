@@ -7,8 +7,8 @@ EXTRA_PACKAGES="https://raw.githubusercontent.com/pkgforge-dev/Anylinux-AppImage
 
 echo "Installing dependencies..."
 echo "---------------------------------------------------------------"
-pacman -Sy --needed archlinux-keyring
-pacman -Su
+pacman -Sy --noconfirm --needed archlinux-keyring
+pacman -Su --noconfirm
 pacman -Syu --noconfirm \
 	base-devel       \
 	bridge-utils     \
