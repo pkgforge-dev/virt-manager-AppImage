@@ -43,3 +43,4 @@ wget --retry-connrefused --tries=30 "$EXTRA_PACKAGES" -O ./get-debloated-pkgs.sh
 chmod +x ./get-debloated-pkgs.sh
 ./get-debloated-pkgs.sh --add-common --prefer-nano
 
+pacman -Q virt-manager | awk '{print $2; exit}' > ~/version
