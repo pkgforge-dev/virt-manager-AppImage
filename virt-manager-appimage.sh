@@ -30,6 +30,7 @@ chmod +x ./quick-sharun
 ./quick-sharun \
 	/usr/bin/virt-manager     \
 	/usr/bin/qemu*            \
+	/usr/bin/dnsmasq          \
 	/usr/bin/virt*            \
 	/usr/bin/libvirtd*        \
 	/usr/lib/libvirt/*        \
