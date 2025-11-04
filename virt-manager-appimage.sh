@@ -14,6 +14,7 @@ export ICON=/usr/share/icons/hicolor/256x256/apps/virt-manager.png
 export OUTNAME=virt-manager-"$VERSION"-anylinux-"$ARCH".AppImage
 export DEPLOY_OPENGL=1
 export DEPLOY_PIPEWIRE=1
+export DEPLOY_SYS_PYTHON=1
 export OPTIMIZE_LAUNCH=1
 
 # this app is hardcoded to look into /usr/share/virt-manager in multiple places
@@ -28,7 +29,6 @@ wget --retry-connrefused --tries=30 "$SHARUN" -O ./quick-sharun
 chmod +x ./quick-sharun
 ./quick-sharun \
 	/usr/bin/virt-manager     \
-	/usr/bin/python*          \
 	/usr/bin/qemu*            \
 	/usr/bin/virt*            \
 	/usr/bin/libvirtd*        \
@@ -37,7 +37,6 @@ chmod +x ./quick-sharun
 	/usr/lib/libosinfo*.so*   \
 	/usr/lib/libgirepository*
 
-cp -r /usr/lib/python3.* ./AppDir/lib
 cp -r /usr/share/libvirt ./AppDir/share
 
 # TODO upstream to sharun
