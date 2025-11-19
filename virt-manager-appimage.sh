@@ -77,12 +77,12 @@ run_install() {
 	RIM_AUTORUN=virt-manager
 	EOF
 
-	rim-build -s temp.RunImage
+	rim-build -s /tmp/temp.RunImage
 }
 export -f run_install
 RIM_OVERFS_MODE=1 RIM_NO_NVIDIA_CHECK=1 ./runimage bash -c run_install
-./temp.RunImage --runtime-extract
-rm -f ./temp.RunImage
+/tmp/temp.RunImage --runtime-extract
+rm -f /tmp/temp.RunImage
 mv ./RunDir ./AppDir
 mv ./AppDir/Run ./AppDir/AppRun
 
