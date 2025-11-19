@@ -104,9 +104,3 @@ export APPNAME=virt-manager
 export OUTPATH=./dist
 export OPTIMIZE_LAUNCH=1
 quick-sharun --make-appimage
-
-mkdir -p ./dist
-mv -v ./*.AppImage* ./dist
-mv -v ~/version     ./dist
-
-echo "All done!"
