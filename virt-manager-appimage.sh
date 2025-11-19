@@ -7,7 +7,6 @@ export DESKTOP=https://raw.githubusercontent.com/virt-manager/virt-manager/refs/
 export ICON=https://github.com/virt-manager/virt-manager/blob/main/data/icons/256x256/apps/virt-manager.png?raw=true
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*-$ARCH.AppImage.zsync"
 export RIM_ALLOW_ROOT=1
-URUNTIME="https://raw.githubusercontent.com/pkgforge-dev/Anylinux-AppImages/refs/heads/main/useful-tools/uruntime2appimage.sh"
 
 echo '== download base RunImage'
 curl -o runimage -L "https://github.com/VHSgunzo/runimage/releases/download/continuous/runimage-$ARCH"
@@ -101,12 +100,10 @@ rm -rfv ./AppDir/sharun/bin/chisel \
 
 # Make AppImage with uruntime
 export VERSION="$(cat ~/version)"
-export OUTNAME=virt-manager-"$VERSION"-anylinux-"$ARCH".AppImage
+export APPNAME=virt-manager
+export OUTPATH=./dist
 export OPTIMIZE_LAUNCH=1
-pacman -S --noconfirm zsync
-wget --retry-connrefused --tries=30 "$URUNTIME" -O ./uruntime2appimage
-chmod +x ./uruntime2appimage
-./uruntime2appimage
+uruntime2appimage
 
 mkdir -p ./dist
 mv -v ./*.AppImage* ./dist
