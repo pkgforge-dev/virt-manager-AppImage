@@ -103,7 +103,7 @@ export VERSION="$(cat ~/version)"
 export APPNAME=virt-manager
 export OUTPATH=./dist
 export OPTIMIZE_LAUNCH=1
-uruntime2appimage
+quick-sharun --make-appimage
 
 mkdir -p ./dist
 mv -v ./*.AppImage* ./dist
